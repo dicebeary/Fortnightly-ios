@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54DBA4300F5498B15E39CE6E /* Pods_FortnightlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2F20B1248437DFCD779D4 /* Pods_FortnightlyTests.framework */; };
+		5D668725114BCA4AFA9731DA /* Pods_Fortnightly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC399C1CDAE7F14EA1824F8C /* Pods_Fortnightly.framework */; };
+		6A1F9BFD26A22F1F00BB3ADA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F9BFC26A22F1F00BB3ADA /* ListViewModel.swift */; };
+		6A1F9C0126A22F3B00BB3ADA /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F9C0026A22F3B00BB3ADA /* ViewModelProtocol.swift */; };
 		6A2FABCD26A1C5B6009BA29C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2FABCC26A1C5B6009BA29C /* AppDelegate.swift */; };
 		6A2FABD126A1C5B6009BA29C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2FABD026A1C5B6009BA29C /* ViewController.swift */; };
 		6A2FABD426A1C5B6009BA29C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2FABD226A1C5B6009BA29C /* Main.storyboard */; };
@@ -16,7 +18,9 @@
 		6A2FABE426A1C5B7009BA29C /* FortnightlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2FABE326A1C5B7009BA29C /* FortnightlyTests.swift */; };
 		6A72EC8926A1F30C00CFAE64 /* ViewDataBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72EC8826A1F30C00CFAE64 /* ViewDataBinder.swift */; };
 		6A72EC9326A1F38300CFAE64 /* ViewEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72EC9226A1F38300CFAE64 /* ViewEventListener.swift */; };
-		8BE88C5D6E36E63D3460A5CB /* Pods_Fortnightly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE79873D3FEFDAB42F44A77 /* Pods_Fortnightly.framework */; };
+		6AC2A2EF26A214EE002D1A53 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A2EE26A214EE002D1A53 /* Domain.framework */; };
+		6AC979F726A2180600490AF9 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC979F626A2180600490AF9 /* Core.framework */; };
+		6D1354D3084F4D61080E0163 /* Pods_FortnightlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386229B0B5402F14FD0BE7BC /* Pods_FortnightlyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A4D606C3AB539EFF4B9B405 /* Pods-Fortnightly.release (mock).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.release (mock).xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.release (mock).xcconfig"; sourceTree = "<group>"; };
-		1E76AFAEC8F0410FF27C26FB /* Pods-Fortnightly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.release.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.release.xcconfig"; sourceTree = "<group>"; };
+		05A4B87750D14F11B966444E /* Pods-FortnightlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.release.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		20C4E2C1D5B5BCCA2EC5A566 /* Pods-Fortnightly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.release.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.release.xcconfig"; sourceTree = "<group>"; };
+		386229B0B5402F14FD0BE7BC /* Pods_FortnightlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortnightlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1F9BFC26A22F1F00BB3ADA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		6A1F9C0026A22F3B00BB3ADA /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		6A2FABC926A1C5B6009BA29C /* Fortnightly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fortnightly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2FABCC26A1C5B6009BA29C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A2FABD026A1C5B6009BA29C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,14 +51,11 @@
 		6A2FABE526A1C5B7009BA29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A72EC8826A1F30C00CFAE64 /* ViewDataBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataBinder.swift; sourceTree = "<group>"; };
 		6A72EC9226A1F38300CFAE64 /* ViewEventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEventListener.swift; sourceTree = "<group>"; };
-		6EE79873D3FEFDAB42F44A77 /* Pods_Fortnightly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnightly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A99C6396B0ED8EDCD3CF07 /* Pods-Fortnightly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.debug.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.debug.xcconfig"; sourceTree = "<group>"; };
-		AC748101D58FB3E06315C7BB /* Pods-FortnightlyTests.release (mock).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.release (mock).xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.release (mock).xcconfig"; sourceTree = "<group>"; };
-		B056C0AA5748A0B6F21166C0 /* Pods-FortnightlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.debug.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF8FEFC1805176ED083D7D66 /* Pods-FortnightlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.release.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.release.xcconfig"; sourceTree = "<group>"; };
-		C2F2F20B1248437DFCD779D4 /* Pods_FortnightlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortnightlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F11686185EFEC9E16A2B40 /* Pods-FortnightlyTests.debug (mock).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.debug (mock).xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.debug (mock).xcconfig"; sourceTree = "<group>"; };
-		FF306EBFCE77DA7A35153106 /* Pods-Fortnightly.debug (mock).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.debug (mock).xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.debug (mock).xcconfig"; sourceTree = "<group>"; };
+		6AC2A2EE26A214EE002D1A53 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC979F626A2180600490AF9 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9148A65359465D0FA825F9B2 /* Pods-FortnightlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.debug.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A93FD9E780779E3D39AF7D5C /* Pods-Fortnightly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.debug.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.debug.xcconfig"; sourceTree = "<group>"; };
+		AC399C1CDAE7F14EA1824F8C /* Pods_Fortnightly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnightly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE88C5D6E36E63D3460A5CB /* Pods_Fortnightly.framework in Frameworks */,
+				6AC979F726A2180600490AF9 /* Core.framework in Frameworks */,
+				6AC2A2EF26A214EE002D1A53 /* Domain.framework in Frameworks */,
+				5D668725114BCA4AFA9731DA /* Pods_Fortnightly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,18 +73,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54DBA4300F5498B15E39CE6E /* Pods_FortnightlyTests.framework in Frameworks */,
+				6D1354D3084F4D61080E0163 /* Pods_FortnightlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		046A22D2DA3B19CC8E5E646A /* Frameworks */ = {
+		688F40ECE706E1903649DDAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6EE79873D3FEFDAB42F44A77 /* Pods_Fortnightly.framework */,
-				C2F2F20B1248437DFCD779D4 /* Pods_FortnightlyTests.framework */,
+				6AC979F626A2180600490AF9 /* Core.framework */,
+				6AC2A2EE26A214EE002D1A53 /* Domain.framework */,
+				AC399C1CDAE7F14EA1824F8C /* Pods_Fortnightly.framework */,
+				386229B0B5402F14FD0BE7BC /* Pods_FortnightlyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,7 +98,7 @@
 				6A2FABE226A1C5B7009BA29C /* FortnightlyTests */,
 				6A2FABCA26A1C5B6009BA29C /* Products */,
 				9FCC74098B03BBFD4AA51439 /* Pods */,
-				046A22D2DA3B19CC8E5E646A /* Frameworks */,
+				688F40ECE706E1903649DDAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				6A2FABD026A1C5B6009BA29C /* ViewController.swift */,
+				6A1F9BFC26A22F1F00BB3ADA /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 			children = (
 				6A72EC8826A1F30C00CFAE64 /* ViewDataBinder.swift */,
 				6A72EC9226A1F38300CFAE64 /* ViewEventListener.swift */,
+				6A1F9C0026A22F3B00BB3ADA /* ViewModelProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -170,14 +180,10 @@
 		9FCC74098B03BBFD4AA51439 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				93A99C6396B0ED8EDCD3CF07 /* Pods-Fortnightly.debug.xcconfig */,
-				FF306EBFCE77DA7A35153106 /* Pods-Fortnightly.debug (mock).xcconfig */,
-				1E76AFAEC8F0410FF27C26FB /* Pods-Fortnightly.release.xcconfig */,
-				1A4D606C3AB539EFF4B9B405 /* Pods-Fortnightly.release (mock).xcconfig */,
-				B056C0AA5748A0B6F21166C0 /* Pods-FortnightlyTests.debug.xcconfig */,
-				D2F11686185EFEC9E16A2B40 /* Pods-FortnightlyTests.debug (mock).xcconfig */,
-				BF8FEFC1805176ED083D7D66 /* Pods-FortnightlyTests.release.xcconfig */,
-				AC748101D58FB3E06315C7BB /* Pods-FortnightlyTests.release (mock).xcconfig */,
+				A93FD9E780779E3D39AF7D5C /* Pods-Fortnightly.debug.xcconfig */,
+				20C4E2C1D5B5BCCA2EC5A566 /* Pods-Fortnightly.release.xcconfig */,
+				9148A65359465D0FA825F9B2 /* Pods-FortnightlyTests.debug.xcconfig */,
+				05A4B87750D14F11B966444E /* Pods-FortnightlyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -189,11 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A2FABF326A1C5B7009BA29C /* Build configuration list for PBXNativeTarget "Fortnightly" */;
 			buildPhases = (
-				A1D4387422C93175CE06AB4C /* [CP] Check Pods Manifest.lock */,
+				24B30058A299269998308CCA /* [CP] Check Pods Manifest.lock */,
 				6A2FABC526A1C5B6009BA29C /* Sources */,
 				6A2FABC626A1C5B6009BA29C /* Frameworks */,
 				6A2FABC726A1C5B6009BA29C /* Resources */,
-				F1151B7042590C7501C00E5F /* [CP] Embed Pods Frameworks */,
+				AB0E208088483B6B9CF4F0EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,11 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A2FABF626A1C5B7009BA29C /* Build configuration list for PBXNativeTarget "FortnightlyTests" */;
 			buildPhases = (
-				99A59CA8B755FA3C27CCEC1C /* [CP] Check Pods Manifest.lock */,
+				9ABF1C10BB04E9EF574028E6 /* [CP] Check Pods Manifest.lock */,
 				6A2FABDB26A1C5B7009BA29C /* Sources */,
 				6A2FABDC26A1C5B7009BA29C /* Frameworks */,
 				6A2FABDD26A1C5B7009BA29C /* Resources */,
-				CF6A6DB59B3B22F08E4B7A49 /* [CP] Embed Pods Frameworks */,
+				1A4398B9F527EBCBABA91680 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,29 +288,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		99A59CA8B755FA3C27CCEC1C /* [CP] Check Pods Manifest.lock */ = {
+		1A4398B9F527EBCBABA91680 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FortnightlyTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A1D4387422C93175CE06AB4C /* [CP] Check Pods Manifest.lock */ = {
+		24B30058A299269998308CCA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,24 +327,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF6A6DB59B3B22F08E4B7A49 /* [CP] Embed Pods Frameworks */ = {
+		9ABF1C10BB04E9EF574028E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FortnightlyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1151B7042590C7501C00E5F /* [CP] Embed Pods Frameworks */ = {
+		AB0E208088483B6B9CF4F0EE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,7 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1F9BFD26A22F1F00BB3ADA /* ListViewModel.swift in Sources */,
 				6A72EC8926A1F30C00CFAE64 /* ViewDataBinder.swift in Sources */,
+				6A1F9C0126A22F3B00BB3ADA /* ViewModelProtocol.swift in Sources */,
 				6A2FABD126A1C5B6009BA29C /* ViewController.swift in Sources */,
 				6A72EC9326A1F38300CFAE64 /* ViewEventListener.swift in Sources */,
 				6A2FABCD26A1C5B6009BA29C /* AppDelegate.swift in Sources */,
@@ -530,8 +538,9 @@
 		};
 		6A2FABF426A1C5B7009BA29C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93A99C6396B0ED8EDCD3CF07 /* Pods-Fortnightly.debug.xcconfig */;
+			baseConfigurationReference = A93FD9E780779E3D39AF7D5C /* Pods-Fortnightly.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,8 +559,9 @@
 		};
 		6A2FABF526A1C5B7009BA29C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E76AFAEC8F0410FF27C26FB /* Pods-Fortnightly.release.xcconfig */;
+			baseConfigurationReference = 20C4E2C1D5B5BCCA2EC5A566 /* Pods-Fortnightly.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -570,7 +580,7 @@
 		};
 		6A2FABF726A1C5B7009BA29C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B056C0AA5748A0B6F21166C0 /* Pods-FortnightlyTests.debug.xcconfig */;
+			baseConfigurationReference = 9148A65359465D0FA825F9B2 /* Pods-FortnightlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -593,7 +603,7 @@
 		};
 		6A2FABF826A1C5B7009BA29C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF8FEFC1805176ED083D7D66 /* Pods-FortnightlyTests.release.xcconfig */;
+			baseConfigurationReference = 05A4B87750D14F11B966444E /* Pods-FortnightlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -614,208 +624,6 @@
 			};
 			name = Release;
 		};
-		6A72EBB726A1ED3F00CFAE64 /* Debug (Mock) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = "Debug (Mock)";
-		};
-		6A72EBB826A1ED3F00CFAE64 /* Debug (Mock) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF306EBFCE77DA7A35153106 /* Pods-Fortnightly.debug (mock).xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZER4CQ9S;
-				INFOPLIST_FILE = Fortnightly/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kvajda.Fortnightly.mock;
-				PRODUCT_NAME = "$(TARGET_NAME)-Mock";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Debug (Mock)";
-		};
-		6A72EBB926A1ED3F00CFAE64 /* Debug (Mock) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2F11686185EFEC9E16A2B40 /* Pods-FortnightlyTests.debug (mock).xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZER4CQ9S;
-				INFOPLIST_FILE = FortnightlyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kvajda.FortnightlyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fortnightly.app/Fortnightly";
-			};
-			name = "Debug (Mock)";
-		};
-		6A72EBBA26A1ED4800CFAE64 /* Release (Mock) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "Release (Mock)";
-		};
-		6A72EBBB26A1ED4800CFAE64 /* Release (Mock) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A4D606C3AB539EFF4B9B405 /* Pods-Fortnightly.release (mock).xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZER4CQ9S;
-				INFOPLIST_FILE = Fortnightly/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kvajda.Fortnightly.mock;
-				PRODUCT_NAME = "$(TARGET_NAME)-Mock";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Release (Mock)";
-		};
-		6A72EBBC26A1ED4800CFAE64 /* Release (Mock) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC748101D58FB3E06315C7BB /* Pods-FortnightlyTests.release (mock).xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZER4CQ9S;
-				INFOPLIST_FILE = FortnightlyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kvajda.FortnightlyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fortnightly.app/Fortnightly";
-			};
-			name = "Release (Mock)";
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -823,9 +631,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A2FABF126A1C5B7009BA29C /* Debug */,
-				6A72EBB726A1ED3F00CFAE64 /* Debug (Mock) */,
 				6A2FABF226A1C5B7009BA29C /* Release */,
-				6A72EBBA26A1ED4800CFAE64 /* Release (Mock) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -834,9 +640,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A2FABF426A1C5B7009BA29C /* Debug */,
-				6A72EBB826A1ED3F00CFAE64 /* Debug (Mock) */,
 				6A2FABF526A1C5B7009BA29C /* Release */,
-				6A72EBBB26A1ED4800CFAE64 /* Release (Mock) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -845,9 +649,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A2FABF726A1C5B7009BA29C /* Debug */,
-				6A72EBB926A1ED3F00CFAE64 /* Debug (Mock) */,
 				6A2FABF826A1C5B7009BA29C /* Release */,
-				6A72EBBC26A1ED4800CFAE64 /* Release (Mock) */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

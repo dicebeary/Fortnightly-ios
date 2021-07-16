@@ -1,22 +1,24 @@
 platform :ios, '13.0'
 
 workspace 'Fortnightly'
-project 'Fortnightly.xcodeproj'
-project 'Domain/Domain.xcodeproj'
 project 'Core/Core.xcodeproj'
+project 'Domain/Domain.xcodeproj'
+project 'Fortnightly.xcodeproj'
 
 use_frameworks!
 inhibit_all_warnings!
 
 target 'Core' do
-  project 'Core/Core'
+  project 'Core/Core.xcodeproj'
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
   pod 'Moya/RxSwift', '~> 14.0'
+  pod 'SwiftyMocky', '4.0.4'
 
   target 'CoreTests' do
     inherit! :search_paths
-    pod 'SwiftyMocky', '4.0.4'
     pod 'RxBlocking', '~> 5.0'
     pod 'RxTest', '~> 5.0'
     pod 'Nimble', '9.0.0'
@@ -24,13 +26,13 @@ target 'Core' do
 end
 
 target 'Domain' do
-  project 'Domain/Domain'
+  project 'Domain/Domain.xcodeproj'
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
+  pod 'SwiftyMocky', '4.0.4'
 
   target 'DomainTests' do
     inherit! :search_paths
-    pod 'SwiftyMocky', '4.0.4'
   end
 end
 
@@ -42,10 +44,10 @@ target 'Fortnightly' do
   pod 'Kingfisher', '6.3.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
+  pod 'SwiftyMocky', '4.0.4'
 
   target 'FortnightlyTests' do
     inherit! :search_paths
-    pod 'SwiftyMocky', '4.0.4'
     pod 'RxBlocking', '~> 5.0'
     pod 'RxTest', '~> 5.0'
     pod 'Nimble', '9.0.0'

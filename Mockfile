@@ -1,0 +1,45 @@
+sourceryCommand: null
+sourceryTemplate: null
+
+FortnightlyTests:
+  sources:
+    include:
+    - ./Fortnightly
+  output: ./FortnightlyTests/Mock.generated.swift
+  targets:
+  - FortnightlyTests
+  testable:
+  - Fortnightly
+  import:
+  - Foundation
+
+DomainTests:
+  sources:
+    include:
+    - ./Domain/Domain
+  output: ./Domain/DomainTests/Mocks/DomainMock.generated.swift
+  targets:
+  - Domain
+  testable:
+  - Domain
+  import:
+  - Common
+  - RxSwift
+  - RxRelay
+
+CoreTests:
+  sources:
+    include:
+    - ./Domain/Domain
+    - ./Core/Core
+  output: ./Core/CoreTests/Mocks/CoreMock.generated.swift
+  targets:
+  - Core
+  testable:
+  - Core
+  import:
+  - Common
+  - Domain
+  - Foundation
+  - RxRelay
+  - RxSwift
