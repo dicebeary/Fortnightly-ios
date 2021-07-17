@@ -6,15 +6,17 @@ project 'Domain/Domain.xcodeproj'
 project 'Fortnightly.xcodeproj'
 
 use_frameworks!
+use_modular_headers!
 inhibit_all_warnings!
 
 target 'Core' do
   project 'Core/Core.xcodeproj'
+  pod 'Alamofire'
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
+  pod 'Moya/RxSwift', '~> 14.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
-  pod 'Moya/RxSwift', '~> 14.0'
   pod 'SwiftyMocky', '4.0.4'
 
   target 'CoreTests' do
@@ -42,6 +44,7 @@ target 'Fortnightly' do
   pod 'RxCocoa', '~> 5.0'
   pod 'RxDataSources', '~> 4.0'
   pod 'Kingfisher', '6.3.0'
+  pod 'Moya/RxSwift', '~> 14.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
   pod 'SwiftyMocky', '4.0.4'

@@ -37,10 +37,18 @@ class NewsInteractor: NewsInteractorInterface {
 private extension NewsInteractor {
     static func map(_ apiModel: NewsArticleApiModel) throws -> Article {
         guard let url = URL(string: apiModel.url) else { throw NewsError.parseError(propertyName: "url") }
-        guard let imageUrl = URL(string: apiModel.urlToImage) else { throw NewsError.parseError(propertyName: "urlToImage") }
+        let imageUrl = URL(string: apiModel.urlToImage ?? "")
+        let publishedDate = map(apiModel.publishedAt)
         return Article(title: apiModel.title,
                        articleURL: url,
                        imageURL: imageUrl,
-                       elapsedTime: apiModel.publishedAt.timeIntervalSince(Date()))
+                       elapsedTime: publishedDate?.timeIntervalSince(Date()) ?? 0)
+    }
+
+    static func map(_ iso8601String: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+        return dateFormatter.date(from: iso8601String)
     }
 }

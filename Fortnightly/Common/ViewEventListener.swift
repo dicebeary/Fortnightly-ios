@@ -9,4 +9,6 @@ import Foundation
 
 protocol ViewEventListener: class {
     associatedtype Events
+
+    var events: Events { get }
 }

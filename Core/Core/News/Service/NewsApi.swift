@@ -47,7 +47,7 @@ extension NewsApi: TargetType {
     var task: Task {
         switch self {
         case .topHeadlines:
-            return .requestPlain
+            return .requestParameters(parameters: ["country": "us"], encoding: URLEncoding.queryString)
         }
     }
 

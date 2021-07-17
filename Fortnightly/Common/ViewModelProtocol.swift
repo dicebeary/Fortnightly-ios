@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ViewModelProtocol {
+protocol ViewModelManipulator {
     associatedtype Input
     associatedtype Output
     func map(from input: Input) -> Output
