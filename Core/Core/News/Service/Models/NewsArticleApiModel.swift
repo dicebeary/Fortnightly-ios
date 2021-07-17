@@ -10,10 +10,10 @@ import Foundation
 struct NewsArticleApiModel: Codable {
     var source: NewsSourceApiModel
     var title: String
-    var author: String
-    var description: String
+    var author: String?
+    var description: String?
     var url: String
-    var urlToImage: String
-    var publishedAt: Date
-    var content: String
+    var urlToImage: String?
+    var publishedAt: String
+    var content: String?
 }

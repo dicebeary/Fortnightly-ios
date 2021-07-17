@@ -8,6 +8,6 @@
 import Foundation
 
 struct NewsSourceApiModel: Codable {
-    var id: String
+    var id: String?
     var name: String
 }

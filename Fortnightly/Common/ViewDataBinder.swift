@@ -9,4 +9,6 @@ import Foundation
 
 protocol ViewDataBinder: class {
     associatedtype Data
+
+    func bind(data: Data)
 }

@@ -8,14 +8,14 @@
 import Foundation
 
 public struct Article {
-    var title: String
-    var articleURL: URL
-    var imageURL: URL
-    var elapsedTime: TimeInterval
+    public var title: String
+    public var articleURL: URL
+    public var imageURL: URL?
+    public var elapsedTime: TimeInterval
 
     public init(title: String,
                 articleURL: URL,
-                imageURL: URL,
+                imageURL: URL?,
                 elapsedTime: TimeInterval) {
         self.title = title
         self.articleURL = articleURL
