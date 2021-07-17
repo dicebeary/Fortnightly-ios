@@ -30,6 +30,7 @@ extension ListViewModel {
 
     func map(from input: Input) -> Output {
         fetchInitialData()
+        searchNews(with: input.screenEvents.searchTextChanged)
 
         return Output(screenData: ListViewController.Data(items: getItems()))
     }
@@ -41,6 +42,17 @@ private extension ListViewModel {
         newsInteractor.fetchNews(text: nil)
             .subscribe()
             .disposed(by: bag)
+    }
+
+    func searchNews(with searchTextEvents: ControlEvent<String?>) {
+        searchTextEvents
+            .skip(1)
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .bind { [newsInteractor, bag] text in
+                newsInteractor.fetchNews(text: text)
+                    .subscribe()
+                    .disposed(by: bag)
+            }.disposed(by: bag)
     }
 }
 

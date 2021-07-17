@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C3CBE8BC507D6749F239134 /* Pods_FortnightlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7064755B4DE8EB9035658743 /* Pods_FortnightlyTests.framework */; };
-		2D4F85378F99F4C4FE5E1658 /* Pods_Fortnightly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F140EDDE69AC6C0ADBDE17A /* Pods_Fortnightly.framework */; };
 		6A1F9BFD26A22F1F00BB3ADA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F9BFC26A22F1F00BB3ADA /* ListViewModel.swift */; };
 		6A1F9C0126A22F3B00BB3ADA /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F9C0026A22F3B00BB3ADA /* ViewModelProtocol.swift */; };
 		6A1F9C2F26A2D8DC00BB3ADA /* ScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F9C2E26A2D8DC00BB3ADA /* ScreenAssembly.swift */; };
@@ -28,6 +26,40 @@
 		6A72EC9326A1F38300CFAE64 /* ViewEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A72EC9226A1F38300CFAE64 /* ViewEventListener.swift */; };
 		6AC2A2EF26A214EE002D1A53 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A2EE26A214EE002D1A53 /* Domain.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		6AC979F726A2180600490AF9 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC979F626A2180600490AF9 /* Core.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		6AFDF9BB26A36D7F002D167E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9BD26A36D7F002D167E /* Localizable.strings */; };
+		6AFDF9CC26A36E9F002D167E /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9C426A36E9F002D167E /* Merriweather-Bold.ttf */; };
+		6AFDF9CD26A36E9F002D167E /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9C526A36E9F002D167E /* Merriweather-Black.ttf */; };
+		6AFDF9CE26A36E9F002D167E /* Merriweather-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9C626A36E9F002D167E /* Merriweather-BlackItalic.ttf */; };
+		6AFDF9CF26A36E9F002D167E /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9C726A36E9F002D167E /* Merriweather-LightItalic.ttf */; };
+		6AFDF9D026A36E9F002D167E /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9C826A36E9F002D167E /* Merriweather-BoldItalic.ttf */; };
+		6AFDF9D126A36E9F002D167E /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9C926A36E9F002D167E /* Merriweather-Italic.ttf */; };
+		6AFDF9D226A36E9F002D167E /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9CA26A36E9F002D167E /* Merriweather-Regular.ttf */; };
+		6AFDF9D326A36E9F002D167E /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9CB26A36E9F002D167E /* Merriweather-Light.ttf */; };
+		6AFDF9E826A36EBE002D167E /* LibreFranklin-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9D626A36EBC002D167E /* LibreFranklin-ThinItalic.ttf */; };
+		6AFDF9E926A36EBF002D167E /* LibreFranklin-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9D726A36EBC002D167E /* LibreFranklin-LightItalic.ttf */; };
+		6AFDF9EA26A36EBF002D167E /* LibreFranklin-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9D826A36EBC002D167E /* LibreFranklin-Light.ttf */; };
+		6AFDF9EB26A36EBF002D167E /* LibreFranklin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9D926A36EBC002D167E /* LibreFranklin-Italic.ttf */; };
+		6AFDF9EC26A36EBF002D167E /* LibreFranklin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9DA26A36EBC002D167E /* LibreFranklin-BoldItalic.ttf */; };
+		6AFDF9ED26A36EBF002D167E /* LibreFranklin-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9DB26A36EBD002D167E /* LibreFranklin-ExtraLightItalic.ttf */; };
+		6AFDF9EE26A36EBF002D167E /* LibreFranklin-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9DC26A36EBD002D167E /* LibreFranklin-ExtraBold.ttf */; };
+		6AFDF9EF26A36EBF002D167E /* LibreFranklin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9DD26A36EBD002D167E /* LibreFranklin-Bold.ttf */; };
+		6AFDF9F026A36EBF002D167E /* LibreFranklin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9DE26A36EBD002D167E /* LibreFranklin-SemiBoldItalic.ttf */; };
+		6AFDF9F126A36EBF002D167E /* LibreFranklin-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9DF26A36EBD002D167E /* LibreFranklin-ExtraBoldItalic.ttf */; };
+		6AFDF9F226A36EBF002D167E /* LibreFranklin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E026A36EBD002D167E /* LibreFranklin-SemiBold.ttf */; };
+		6AFDF9F326A36EBF002D167E /* LibreFranklin-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E126A36EBD002D167E /* LibreFranklin-Black.ttf */; };
+		6AFDF9F426A36EBF002D167E /* LibreFranklin-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E226A36EBE002D167E /* LibreFranklin-BlackItalic.ttf */; };
+		6AFDF9F526A36EBF002D167E /* LibreFranklin-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E326A36EBE002D167E /* LibreFranklin-ExtraLight.ttf */; };
+		6AFDF9F626A36EBF002D167E /* LibreFranklin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E426A36EBE002D167E /* LibreFranklin-Regular.ttf */; };
+		6AFDF9F726A36EBF002D167E /* LibreFranklin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E526A36EBE002D167E /* LibreFranklin-Medium.ttf */; };
+		6AFDF9F826A36EBF002D167E /* LibreFranklin-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E626A36EBE002D167E /* LibreFranklin-Thin.ttf */; };
+		6AFDF9F926A36EBF002D167E /* LibreFranklin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFDF9E726A36EBE002D167E /* LibreFranklin-MediumItalic.ttf */; };
+		6AFDFA4C26A3715D002D167E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDFA4926A3715D002D167E /* Fonts.swift */; };
+		6AFDFA4D26A3715D002D167E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDFA4A26A3715D002D167E /* Localization.swift */; };
+		6AFDFA4E26A3715D002D167E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDFA4B26A3715D002D167E /* XCAssets+Generated.swift */; };
+		6AFDFA5226A37305002D167E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDFA5126A37305002D167E /* UIColor+Extensions.swift */; };
+		6AFDFA5626A37610002D167E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDFA5526A37610002D167E /* Date+Extensions.swift */; };
+		A0F717D8E1EB5D8A8A937329 /* Pods_Fortnightly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FCFD06BE880976125BAEF2 /* Pods_Fortnightly.framework */; };
+		E54DE894FA1D9F4E56098FA0 /* Pods_FortnightlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163C917BE1CC6C9D1896E27 /* Pods_FortnightlyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		241852CEF951D7230642E996 /* Pods-FortnightlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.debug.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67130F64B57A503342D9CC7C /* Pods-FortnightlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.debug.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A1F9BFC26A22F1F00BB3ADA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		6A1F9C0026A22F3B00BB3ADA /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		6A1F9C2E26A2D8DC00BB3ADA /* ScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAssembly.swift; sourceTree = "<group>"; };
@@ -65,11 +97,43 @@
 		6A72EC9226A1F38300CFAE64 /* ViewEventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEventListener.swift; sourceTree = "<group>"; };
 		6AC2A2EE26A214EE002D1A53 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC979F626A2180600490AF9 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7064755B4DE8EB9035658743 /* Pods_FortnightlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortnightlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F140EDDE69AC6C0ADBDE17A /* Pods_Fortnightly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnightly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A60A2B4C6A9C9124E4F5EC6E /* Pods-FortnightlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.release.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.release.xcconfig"; sourceTree = "<group>"; };
-		CA18128BA41A0C04E7737FF4 /* Pods-Fortnightly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.debug.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.debug.xcconfig"; sourceTree = "<group>"; };
-		FEC90C02BBD14EDBD033F08B /* Pods-Fortnightly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.release.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.release.xcconfig"; sourceTree = "<group>"; };
+		6AFDF9BC26A36D7F002D167E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6AFDF9C426A36E9F002D167E /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Bold.ttf"; sourceTree = "<group>"; };
+		6AFDF9C526A36E9F002D167E /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		6AFDF9C626A36E9F002D167E /* Merriweather-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BlackItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9C726A36E9F002D167E /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9C826A36E9F002D167E /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9C926A36E9F002D167E /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Italic.ttf"; sourceTree = "<group>"; };
+		6AFDF9CA26A36E9F002D167E /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		6AFDF9CB26A36E9F002D167E /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.ttf"; sourceTree = "<group>"; };
+		6AFDF9D626A36EBC002D167E /* LibreFranklin-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-ThinItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9D726A36EBC002D167E /* LibreFranklin-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-LightItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9D826A36EBC002D167E /* LibreFranklin-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Light.ttf"; sourceTree = "<group>"; };
+		6AFDF9D926A36EBC002D167E /* LibreFranklin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Italic.ttf"; sourceTree = "<group>"; };
+		6AFDF9DA26A36EBC002D167E /* LibreFranklin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9DB26A36EBD002D167E /* LibreFranklin-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9DC26A36EBD002D167E /* LibreFranklin-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-ExtraBold.ttf"; sourceTree = "<group>"; };
+		6AFDF9DD26A36EBD002D167E /* LibreFranklin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Bold.ttf"; sourceTree = "<group>"; };
+		6AFDF9DE26A36EBD002D167E /* LibreFranklin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9DF26A36EBD002D167E /* LibreFranklin-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9E026A36EBD002D167E /* LibreFranklin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-SemiBold.ttf"; sourceTree = "<group>"; };
+		6AFDF9E126A36EBD002D167E /* LibreFranklin-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Black.ttf"; sourceTree = "<group>"; };
+		6AFDF9E226A36EBE002D167E /* LibreFranklin-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-BlackItalic.ttf"; sourceTree = "<group>"; };
+		6AFDF9E326A36EBE002D167E /* LibreFranklin-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6AFDF9E426A36EBE002D167E /* LibreFranklin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Regular.ttf"; sourceTree = "<group>"; };
+		6AFDF9E526A36EBE002D167E /* LibreFranklin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Medium.ttf"; sourceTree = "<group>"; };
+		6AFDF9E626A36EBE002D167E /* LibreFranklin-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Thin.ttf"; sourceTree = "<group>"; };
+		6AFDF9E726A36EBE002D167E /* LibreFranklin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6AFDFA4926A3715D002D167E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		6AFDFA4A26A3715D002D167E /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		6AFDFA4B26A3715D002D167E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		6AFDFA5126A37305002D167E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		6AFDFA5526A37610002D167E /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		817620F023B8574FDB47D749 /* Pods-FortnightlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortnightlyTests.release.xcconfig"; path = "Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		B65619A0B7BB0F379CF1883F /* Pods-Fortnightly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.debug.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.debug.xcconfig"; sourceTree = "<group>"; };
+		C8FCFD06BE880976125BAEF2 /* Pods_Fortnightly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fortnightly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36548A21264B5467AA45D6F /* Pods-Fortnightly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fortnightly.release.xcconfig"; path = "Target Support Files/Pods-Fortnightly/Pods-Fortnightly.release.xcconfig"; sourceTree = "<group>"; };
+		F163C917BE1CC6C9D1896E27 /* Pods_FortnightlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortnightlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +143,7 @@
 			files = (
 				6AC979F726A2180600490AF9 /* Core.framework in Frameworks */,
 				6AC2A2EF26A214EE002D1A53 /* Domain.framework in Frameworks */,
-				2D4F85378F99F4C4FE5E1658 /* Pods_Fortnightly.framework in Frameworks */,
+				A0F717D8E1EB5D8A8A937329 /* Pods_Fortnightly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3CBE8BC507D6749F239134 /* Pods_FortnightlyTests.framework in Frameworks */,
+				E54DE894FA1D9F4E56098FA0 /* Pods_FortnightlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +163,8 @@
 			children = (
 				6AC979F626A2180600490AF9 /* Core.framework */,
 				6AC2A2EE26A214EE002D1A53 /* Domain.framework */,
-				7F140EDDE69AC6C0ADBDE17A /* Pods_Fortnightly.framework */,
-				7064755B4DE8EB9035658743 /* Pods_FortnightlyTests.framework */,
+				C8FCFD06BE880976125BAEF2 /* Pods_Fortnightly.framework */,
+				F163C917BE1CC6C9D1896E27 /* Pods_FortnightlyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +199,8 @@
 			children = (
 				6A1F9C3F26A2DF2500BB3ADA /* UITableView+Extensions.swift */,
 				6A1F9C4526A2DF5500BB3ADA /* UITableViewCell+Extensions.swift */,
+				6AFDFA5126A37305002D167E /* UIColor+Extensions.swift */,
+				6AFDFA5526A37610002D167E /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -162,12 +228,12 @@
 		6A2FABCB26A1C5B6009BA29C /* Fortnightly */ = {
 			isa = PBXGroup;
 			children = (
+				6AFDF9C026A36E5E002D167E /* Resources */,
 				6A1F9C3E26A2DF0600BB3ADA /* Extensions */,
 				6A72EC8726A1F2D500CFAE64 /* Common */,
 				6A72EC8026A1F27C00CFAE64 /* Screens */,
 				6A72EC7F26A1F25800CFAE64 /* Storyboards */,
 				6A2FABCC26A1C5B6009BA29C /* AppDelegate.swift */,
-				6A2FABD526A1C5B6009BA29C /* Assets.xcassets */,
 				6A2FABDA26A1C5B6009BA29C /* Info.plist */,
 			);
 			path = Fortnightly;
@@ -222,6 +288,7 @@
 		6A72EC8726A1F2D500CFAE64 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6AFDFA4226A37120002D167E /* Generated */,
 				6A72EC8826A1F30C00CFAE64 /* ViewDataBinder.swift */,
 				6A72EC9226A1F38300CFAE64 /* ViewEventListener.swift */,
 				6A1F9C0026A22F3B00BB3ADA /* ViewModelProtocol.swift */,
@@ -230,13 +297,82 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		6AFDF9C026A36E5E002D167E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6AFDF9C326A36E7C002D167E /* Assets */,
+				6AFDF9C226A36E75002D167E /* Localization */,
+				6AFDF9C126A36E6E002D167E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6AFDF9C126A36E6E002D167E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6AFDF9C526A36E9F002D167E /* Merriweather-Black.ttf */,
+				6AFDF9C626A36E9F002D167E /* Merriweather-BlackItalic.ttf */,
+				6AFDF9C426A36E9F002D167E /* Merriweather-Bold.ttf */,
+				6AFDF9C826A36E9F002D167E /* Merriweather-BoldItalic.ttf */,
+				6AFDF9C926A36E9F002D167E /* Merriweather-Italic.ttf */,
+				6AFDF9CB26A36E9F002D167E /* Merriweather-Light.ttf */,
+				6AFDF9C726A36E9F002D167E /* Merriweather-LightItalic.ttf */,
+				6AFDF9CA26A36E9F002D167E /* Merriweather-Regular.ttf */,
+				6AFDF9E126A36EBD002D167E /* LibreFranklin-Black.ttf */,
+				6AFDF9E226A36EBE002D167E /* LibreFranklin-BlackItalic.ttf */,
+				6AFDF9DD26A36EBD002D167E /* LibreFranklin-Bold.ttf */,
+				6AFDF9DA26A36EBC002D167E /* LibreFranklin-BoldItalic.ttf */,
+				6AFDF9DC26A36EBD002D167E /* LibreFranklin-ExtraBold.ttf */,
+				6AFDF9DF26A36EBD002D167E /* LibreFranklin-ExtraBoldItalic.ttf */,
+				6AFDF9E326A36EBE002D167E /* LibreFranklin-ExtraLight.ttf */,
+				6AFDF9DB26A36EBD002D167E /* LibreFranklin-ExtraLightItalic.ttf */,
+				6AFDF9D926A36EBC002D167E /* LibreFranklin-Italic.ttf */,
+				6AFDF9D826A36EBC002D167E /* LibreFranklin-Light.ttf */,
+				6AFDF9D726A36EBC002D167E /* LibreFranklin-LightItalic.ttf */,
+				6AFDF9E526A36EBE002D167E /* LibreFranklin-Medium.ttf */,
+				6AFDF9E726A36EBE002D167E /* LibreFranklin-MediumItalic.ttf */,
+				6AFDF9E426A36EBE002D167E /* LibreFranklin-Regular.ttf */,
+				6AFDF9E026A36EBD002D167E /* LibreFranklin-SemiBold.ttf */,
+				6AFDF9DE26A36EBD002D167E /* LibreFranklin-SemiBoldItalic.ttf */,
+				6AFDF9E626A36EBE002D167E /* LibreFranklin-Thin.ttf */,
+				6AFDF9D626A36EBC002D167E /* LibreFranklin-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6AFDF9C226A36E75002D167E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				6AFDF9BD26A36D7F002D167E /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		6AFDF9C326A36E7C002D167E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6A2FABD526A1C5B6009BA29C /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6AFDFA4226A37120002D167E /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				6AFDFA4926A3715D002D167E /* Fonts.swift */,
+				6AFDFA4A26A3715D002D167E /* Localization.swift */,
+				6AFDFA4B26A3715D002D167E /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		9FCC74098B03BBFD4AA51439 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CA18128BA41A0C04E7737FF4 /* Pods-Fortnightly.debug.xcconfig */,
-				FEC90C02BBD14EDBD033F08B /* Pods-Fortnightly.release.xcconfig */,
-				241852CEF951D7230642E996 /* Pods-FortnightlyTests.debug.xcconfig */,
-				A60A2B4C6A9C9124E4F5EC6E /* Pods-FortnightlyTests.release.xcconfig */,
+				B65619A0B7BB0F379CF1883F /* Pods-Fortnightly.debug.xcconfig */,
+				D36548A21264B5467AA45D6F /* Pods-Fortnightly.release.xcconfig */,
+				67130F64B57A503342D9CC7C /* Pods-FortnightlyTests.debug.xcconfig */,
+				817620F023B8574FDB47D749 /* Pods-FortnightlyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -248,11 +384,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A2FABF326A1C5B7009BA29C /* Build configuration list for PBXNativeTarget "Fortnightly" */;
 			buildPhases = (
-				5D03D986FA5C5EDE6FAD723E /* [CP] Check Pods Manifest.lock */,
+				7771DE30E0B85F540F151FAD /* [CP] Check Pods Manifest.lock */,
 				6A2FABC526A1C5B6009BA29C /* Sources */,
 				6A2FABC626A1C5B6009BA29C /* Frameworks */,
 				6A2FABC726A1C5B6009BA29C /* Resources */,
-				A075F35D688D311609A72700 /* [CP] Embed Pods Frameworks */,
+				6AFDF9AE26A36CEA002D167E /* Swiftgen */,
+				8585889BF7607A40D5EE2D81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,11 +404,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A2FABF626A1C5B7009BA29C /* Build configuration list for PBXNativeTarget "FortnightlyTests" */;
 			buildPhases = (
-				6C9AE0EEE20806DCD855F49F /* [CP] Check Pods Manifest.lock */,
+				1D7422D39CBA1022E212CFC8 /* [CP] Check Pods Manifest.lock */,
 				6A2FABDB26A1C5B7009BA29C /* Sources */,
 				6A2FABDC26A1C5B7009BA29C /* Frameworks */,
 				6A2FABDD26A1C5B7009BA29C /* Resources */,
-				8655997B7D7C500DC68E5A2E /* [CP] Embed Pods Frameworks */,
+				F47E3E42D421C85CA806BF4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,10 +462,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFDF9E926A36EBF002D167E /* LibreFranklin-LightItalic.ttf in Resources */,
+				6AFDF9CC26A36E9F002D167E /* Merriweather-Bold.ttf in Resources */,
+				6AFDF9EB26A36EBF002D167E /* LibreFranklin-Italic.ttf in Resources */,
+				6AFDF9ED26A36EBF002D167E /* LibreFranklin-ExtraLightItalic.ttf in Resources */,
+				6AFDF9CD26A36E9F002D167E /* Merriweather-Black.ttf in Resources */,
+				6AFDF9F226A36EBF002D167E /* LibreFranklin-SemiBold.ttf in Resources */,
+				6AFDF9D026A36E9F002D167E /* Merriweather-BoldItalic.ttf in Resources */,
+				6AFDF9F726A36EBF002D167E /* LibreFranklin-Medium.ttf in Resources */,
+				6AFDF9E826A36EBE002D167E /* LibreFranklin-ThinItalic.ttf in Resources */,
+				6AFDF9F826A36EBF002D167E /* LibreFranklin-Thin.ttf in Resources */,
+				6AFDF9BB26A36D7F002D167E /* Localizable.strings in Resources */,
 				6A2FABD926A1C5B6009BA29C /* LaunchScreen.storyboard in Resources */,
 				6A2FABD626A1C5B6009BA29C /* Assets.xcassets in Resources */,
+				6AFDF9CF26A36E9F002D167E /* Merriweather-LightItalic.ttf in Resources */,
 				6A1F9C3726A2DCB800BB3ADA /* NewsCell.xib in Resources */,
+				6AFDF9F926A36EBF002D167E /* LibreFranklin-MediumItalic.ttf in Resources */,
+				6AFDF9EE26A36EBF002D167E /* LibreFranklin-ExtraBold.ttf in Resources */,
 				6A2FABD426A1C5B6009BA29C /* Main.storyboard in Resources */,
+				6AFDF9F626A36EBF002D167E /* LibreFranklin-Regular.ttf in Resources */,
+				6AFDF9EA26A36EBF002D167E /* LibreFranklin-Light.ttf in Resources */,
+				6AFDF9F126A36EBF002D167E /* LibreFranklin-ExtraBoldItalic.ttf in Resources */,
+				6AFDF9EC26A36EBF002D167E /* LibreFranklin-BoldItalic.ttf in Resources */,
+				6AFDF9F026A36EBF002D167E /* LibreFranklin-SemiBoldItalic.ttf in Resources */,
+				6AFDF9D326A36E9F002D167E /* Merriweather-Light.ttf in Resources */,
+				6AFDF9EF26A36EBF002D167E /* LibreFranklin-Bold.ttf in Resources */,
+				6AFDF9D126A36E9F002D167E /* Merriweather-Italic.ttf in Resources */,
+				6AFDF9F426A36EBF002D167E /* LibreFranklin-BlackItalic.ttf in Resources */,
+				6AFDF9D226A36E9F002D167E /* Merriweather-Regular.ttf in Resources */,
+				6AFDF9F526A36EBF002D167E /* LibreFranklin-ExtraLight.ttf in Resources */,
+				6AFDF9F326A36EBF002D167E /* LibreFranklin-Black.ttf in Resources */,
+				6AFDF9CE26A36E9F002D167E /* Merriweather-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,29 +506,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5D03D986FA5C5EDE6FAD723E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Fortnightly-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C9AE0EEE20806DCD855F49F /* [CP] Check Pods Manifest.lock */ = {
+		1D7422D39CBA1022E212CFC8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,24 +528,47 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8655997B7D7C500DC68E5A2E /* [CP] Embed Pods Frameworks */ = {
+		6AFDF9AE26A36CEA002D167E /* Swiftgen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
+			name = Swiftgen;
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks.sh\"\n";
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" config run \nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
+		7771DE30E0B85F540F151FAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fortnightly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A075F35D688D311609A72700 /* [CP] Embed Pods Frameworks */ = {
+		8585889BF7607A40D5EE2D81 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,6 +585,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fortnightly/Pods-Fortnightly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F47E3E42D421C85CA806BF4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FortnightlyTests/Pods-FortnightlyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -427,14 +609,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFDFA4E26A3715D002D167E /* XCAssets+Generated.swift in Sources */,
 				6A1F9C4026A2DF2500BB3ADA /* UITableView+Extensions.swift in Sources */,
 				6A1F9BFD26A22F1F00BB3ADA /* ListViewModel.swift in Sources */,
+				6AFDFA4D26A3715D002D167E /* Localization.swift in Sources */,
+				6AFDFA4C26A3715D002D167E /* Fonts.swift in Sources */,
 				6A1F9C2F26A2D8DC00BB3ADA /* ScreenAssembly.swift in Sources */,
 				6A1F9C4E26A2E33C00BB3ADA /* ListViewMapper.swift in Sources */,
 				6A72EC8926A1F30C00CFAE64 /* ViewDataBinder.swift in Sources */,
+				6AFDFA5626A37610002D167E /* Date+Extensions.swift in Sources */,
 				6A1F9C4A26A2DFC100BB3ADA /* ViewError.swift in Sources */,
 				6A1F9C0126A22F3B00BB3ADA /* ViewModelProtocol.swift in Sources */,
 				6A2FABD126A1C5B6009BA29C /* ListViewController.swift in Sources */,
+				6AFDFA5226A37305002D167E /* UIColor+Extensions.swift in Sources */,
 				6A72EC9326A1F38300CFAE64 /* ViewEventListener.swift in Sources */,
 				6A1F9C3626A2DCB800BB3ADA /* NewsCell.swift in Sources */,
 				6A1F9C4626A2DF5500BB3ADA /* UITableViewCell+Extensions.swift in Sources */,
@@ -475,6 +662,14 @@
 				6A2FABD826A1C5B6009BA29C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6AFDF9BD26A36D7F002D167E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AFDF9BC26A36D7F002D167E /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -598,7 +793,7 @@
 		};
 		6A2FABF426A1C5B7009BA29C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA18128BA41A0C04E7737FF4 /* Pods-Fortnightly.debug.xcconfig */;
+			baseConfigurationReference = B65619A0B7BB0F379CF1883F /* Pods-Fortnightly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -618,7 +813,7 @@
 		};
 		6A2FABF526A1C5B7009BA29C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEC90C02BBD14EDBD033F08B /* Pods-Fortnightly.release.xcconfig */;
+			baseConfigurationReference = D36548A21264B5467AA45D6F /* Pods-Fortnightly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -638,7 +833,7 @@
 		};
 		6A2FABF726A1C5B7009BA29C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 241852CEF951D7230642E996 /* Pods-FortnightlyTests.debug.xcconfig */;
+			baseConfigurationReference = 67130F64B57A503342D9CC7C /* Pods-FortnightlyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -660,7 +855,7 @@
 		};
 		6A2FABF826A1C5B7009BA29C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A60A2B4C6A9C9124E4F5EC6E /* Pods-FortnightlyTests.release.xcconfig */;
+			baseConfigurationReference = 817620F023B8574FDB47D749 /* Pods-FortnightlyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

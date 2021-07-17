@@ -11,7 +11,7 @@ import RxDataSources
 import RxSwift
 import RxCocoa
 
-final class ListViewController: UIViewController {
+final class ListViewController: UIViewController, UISearchBarDelegate {
     // MARK: - ViewModel
     var viewModel: ListViewModel!
 
@@ -19,7 +19,9 @@ final class ListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Properties
-    let bag = DisposeBag()
+    private var searchController: UISearchController!
+    private let searchTextRelay = PublishRelay<String?>()
+    private let bag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,22 @@ final class ListViewController: UIViewController {
         setupNavigationBar()
         setupBindings()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.navigationItem.hidesSearchBarWhenScrolling = true
+    }
 }
 
 // MARK: - Binding data
 extension ListViewController: ViewDataBinder {
     struct Data {
-        var items: Driver<[NewsCell.Data]>
+        let items: Driver<[NewsCell.Data]>
     }
 
     func bind(data: Data) {
@@ -46,11 +58,11 @@ extension ListViewController: ViewDataBinder {
 // MARK: - Providing events
 extension ListViewController: ViewEventListener {
     struct Events {
-
+        let searchTextChanged: ControlEvent<String?>
     }
 
     var events: Events {
-        return Events()
+        return Events(searchTextChanged: ControlEvent(events: searchTextRelay.asObservable()))
     }
 }
 
@@ -70,8 +82,29 @@ private extension ListViewController {
     }
 
     func setupNavigationBar() {
-        self.tabBarController?.title = "Front page"
+        // Setup Title styles
+        self.tabBarController?.title = Localization.newsListTitle
         self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
-//        self.navigationController?.navigationBar.large = true
+        self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = [.font: FontFamily.Merriweather.bold.font(size: 17.0)]
+        self.tabBarController?.navigationController?.navigationBar.largeTitleTextAttributes = [.font: FontFamily.Merriweather.bold.font(size: 36.0)]
+
+        // Setup search bar functionalities
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.searchBar.placeholder = "Search here"
+        self.definesPresentationContext = true
+        self.tabBarController?.navigationItem.searchController = searchController
+
+        searchController.searchBar.rx.text
+            .bind(to: searchTextRelay)
+            .disposed(by: bag)
+
+        searchController.searchBar.rx.cancelButtonClicked
+            .map { _ in return nil }
+            .bind(to: searchTextRelay)
+            .disposed(by: bag)
     }
 }
