@@ -20,8 +20,8 @@ class NewsService: NewsServiceInterface {
         self.provider = provider
     }
 
-    func getNewsList() -> Single<NewsApiModel> {
-        return provider.rx.request(.topHeadlines(text: nil))
+    func getNewsList(text: String?) -> Single<NewsApiModel> {
+        return provider.rx.request(.topHeadlines(text: text))
             .filterSuccessfulStatusCodes()
             .map(NewsApiModel.self)
     }

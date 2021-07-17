@@ -23,7 +23,7 @@ class NewsInteractor: NewsInteractorInterface {
     }
 
     func fetchNews(text: String?) -> Completable {
-        return service.getNewsList()
+        return service.getNewsList(text: text)
             .map(\.articles)
             .map { try $0.map { try NewsInteractor.map($0) } }
             .do(onSuccess: { [weak self] news in
@@ -42,7 +42,7 @@ private extension NewsInteractor {
         return Article(title: apiModel.title,
                        articleURL: url,
                        imageURL: imageUrl,
-                       elapsedTime: publishedDate?.timeIntervalSince(Date()) ?? 0)
+                       publishedDate: publishedDate ?? Date())
     }
 
     static func map(_ iso8601String: String) -> Date? {

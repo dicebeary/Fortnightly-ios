@@ -46,8 +46,12 @@ extension NewsApi: TargetType {
     /// The type of HTTP task to be performed.
     var task: Task {
         switch self {
-        case .topHeadlines:
-            return .requestParameters(parameters: ["country": "us"], encoding: URLEncoding.queryString)
+        case .topHeadlines(let text):
+            var params = ["country": "us"]
+            if let text = text {
+                params["q"] = text
+            }
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }
 

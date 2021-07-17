@@ -11,15 +11,15 @@ public struct Article {
     public var title: String
     public var articleURL: URL
     public var imageURL: URL?
-    public var elapsedTime: TimeInterval
+    public var publishedDate: Date
 
     public init(title: String,
                 articleURL: URL,
                 imageURL: URL?,
-                elapsedTime: TimeInterval) {
+                publishedDate: Date) {
         self.title = title
         self.articleURL = articleURL
         self.imageURL = imageURL
-        self.elapsedTime = elapsedTime
+        self.publishedDate = publishedDate
     }
 }

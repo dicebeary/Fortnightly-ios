@@ -33,7 +33,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="News" image="menu" id="XD3-H1-98L"/>
                     <navigationItem key="navigationItem" id="SXa-3Y-hiH"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="gwe-6c-5F6" id="NtU-b7-lOY"/>
                     </connections>
@@ -68,6 +67,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZPb-5K-8Y8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZoZ-EO-IXi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

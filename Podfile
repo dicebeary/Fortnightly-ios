@@ -48,6 +48,7 @@ target 'Fortnightly' do
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
   pod 'SwiftyMocky', '4.0.4'
+  pod 'SwiftGen', '6.4.0'
 
   target 'FortnightlyTests' do
     inherit! :search_paths
