@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Article {
+public struct Article: Equatable {
     public var title: String
     public var articleURL: URL
     public var imageURL: URL?

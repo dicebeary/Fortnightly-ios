@@ -9,7 +9,6 @@ import Domain
 import RxSwift
 import RxCocoa
 
-// sourcery: AutoMockable
 class NewsInteractor {
     // Relays for local storing
     private let selectedArticleRelay = BehaviorRelay<Article?>(value: nil)
@@ -27,14 +26,14 @@ class NewsInteractor {
 
 // MARK: - NewsInteractorInterface conformation
 extension NewsInteractor: NewsInteractorInterface {
-    var selectedArticle: Observable<Article> {
+    func getNews() -> Observable<[Article]> {
+        newsRelay.asObservable()
+    }
+
+    func getSelectedArticle() -> Observable<Article> {
         selectedArticleRelay.asObservable()
             .filter { $0 != nil }
             .map { $0! }
-    }
-
-    var news: Observable<[Article]> {
-        newsRelay.asObservable()
     }
 
     func fetchNews(text: String?) -> Completable {
@@ -74,20 +73,6 @@ extension NewsInteractor: NewsInteractorInterface {
             return Disposables.create()
         }
     }
-
-//    private func updateArticles() {
-//        let articles = newsRelay.take(1).asSingle()
-//        let sources = sourcesRelay.take(1).asSingle()
-//
-//        Single.zip(articles, sources)
-//            .map { articles, sources -> [Article] in
-//                return NewsInteractor.update(articles: articles, with: sources)
-//            }
-//            .subscribe(onSuccess: { [weak self] articles in
-//                self?.newsRelay.accept(articles)
-//            })
-//            .dispose()
-//    }
 }
 
 
@@ -134,11 +119,4 @@ private extension NewsInteractor {
 
         return dateFormatter.date(from: iso8601String)
     }
-
-//    static func update(articles: [Article], with sources: [Source]) -> [Article] {
-//        return articles.map { article in
-//            var newArticle = article
-//            newArticle.category = mapCategory(of: <#T##String?#>, from: <#T##[Source]#>)
-//        }
-//    }
 }

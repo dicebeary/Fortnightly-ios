@@ -32,7 +32,15 @@ private extension CoreNewsAssembly {
 private extension CoreNewsAssembly {
     func registerService(to container: Container) {
         container.register(NewsServiceInterface.self) { resolver in
-            let provider = MoyaProvider<NewsApi>(plugins: [NetworkLoggerPlugin()])
+            var provider: MoyaProvider<NewsApi>
+            switch AppInfo.environment {
+            case .mock:
+                let stubClosure: MoyaProvider<NewsApi>.StubClosure = { _ in return StubBehavior.delayed(seconds: 1.0) }
+                provider = MoyaProvider<NewsApi>(stubClosure: stubClosure,
+                                                 plugins: [NetworkLoggerPlugin()])
+            case .prod:
+                provider = MoyaProvider<NewsApi>(plugins: [NetworkLoggerPlugin()])
+            }
             return NewsService(provider: provider)
         }
         .inObjectScope(.graph)

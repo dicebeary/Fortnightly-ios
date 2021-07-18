@@ -4,6 +4,7 @@ sourceryTemplate: null
 FortnightlyTests:
   sources:
     include:
+    - ./Domain/Domain
     - ./Fortnightly
   output: ./FortnightlyTests/Mock.generated.swift
   targets:
@@ -11,8 +12,11 @@ FortnightlyTests:
   testable:
   - Fortnightly
   import:
+  - Domain
   - Foundation
-
+  - RxCocoa
+  - RxSwift
+  
 DomainTests:
   sources:
     include:
@@ -23,9 +27,8 @@ DomainTests:
   testable:
   - Domain
   import:
-  - Common
   - RxSwift
-  - RxRelay
+  - RxCocoa
 
 CoreTests:
   sources:
@@ -38,8 +41,7 @@ CoreTests:
   testable:
   - Core
   import:
-  - Common
   - Domain
   - Foundation
-  - RxRelay
+  - RxCocoa
   - RxSwift

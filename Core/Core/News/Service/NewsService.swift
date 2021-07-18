@@ -9,9 +9,6 @@ import Foundation
 import RxSwift
 import Moya
 
-// sourcery: AutoMockable
-extension MoyaProvider where Target == NewsApi {}
-
 class NewsService: NewsServiceInterface {
 
     var provider: MoyaProvider<NewsApi>

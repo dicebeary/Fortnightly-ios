@@ -41,25 +41,25 @@ private extension DetailsViewModel {
 // MARK: - Output helper methods
 private extension DetailsViewModel {
     func getScreenData() -> DetailsViewController.Data {
-        let imageUrl = newsInteractor.selectedArticle
+        let imageUrl = newsInteractor.getSelectedArticle()
             .map(\.imageURL)
             .asDriver(onErrorJustReturn: nil)
         
-        let category = newsInteractor.selectedArticle
+        let category = newsInteractor.getSelectedArticle()
             .map(\.category)
             .map { $0?.uppercased() }
             .asDriver(onErrorJustReturn: nil)
 
-        let language = newsInteractor.selectedArticle
+        let language = newsInteractor.getSelectedArticle()
             .map(\.language)
             .map { $0?.uppercased() }
             .asDriver(onErrorJustReturn: nil)
 
-        let title = newsInteractor.selectedArticle
+        let title = newsInteractor.getSelectedArticle()
             .map(\.title)
             .asDriver(onErrorJustReturn: "")
 
-        let content = newsInteractor.selectedArticle
+        let content = newsInteractor.getSelectedArticle()
             .map(\.content)
             .asDriver(onErrorJustReturn: "")
         return DetailsViewController.Data(imageUrl: imageUrl, language: language, category: category, title: title, content: content)
