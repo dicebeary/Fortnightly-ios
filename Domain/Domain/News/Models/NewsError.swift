@@ -9,4 +9,5 @@ import Foundation
 
 public enum NewsError: Error {
     case parseError(propertyName: String)
+    case moyaError(code: String, message: String)
 }

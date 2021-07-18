@@ -19,13 +19,17 @@ class NewsService: NewsServiceInterface {
 
     func getNewsList(text: String?) -> Single<NewsApiModel> {
         return provider.rx.request(.topHeadlines(text: text))
+            .activateLoadingIndicator()
             .filterSuccessfulStatusCodes()
+            .parseError()
             .map(NewsApiModel.self)
     }
 
     func getSources() -> Single<SourcesApiModel> {
         return provider.rx.request(.sources)
+            .activateLoadingIndicator()
             .filterSuccessfulStatusCodes()
+            .parseError()
             .map(SourcesApiModel.self)
     }
 }

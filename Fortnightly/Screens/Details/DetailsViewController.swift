@@ -32,6 +32,16 @@ final class DetailsViewController: UIViewController {
         setupBindings()
         setupNavigationBar()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
 }
 
 // MARK: - Binding data
@@ -109,9 +119,14 @@ private extension DetailsViewController {
     }
 
     func setupNavigationBar() {
+        let imageView = UIImageView(image: Asset.icon.image)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+
         navigationController?.navigationBar.backIndicatorImage = Asset.baselineArrowBackBlack24pt.image
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = Asset.baselineArrowBackBlack24pt.image
         self.navigationController?.navigationBar.backItem?.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.blackishColor
+        self.navigationController?.navigationBar.backgroundColor = .white
     }
 }
