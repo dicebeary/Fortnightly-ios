@@ -17,10 +17,9 @@ target 'Core' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
-  pod 'SwiftyMocky', '4.0.4'
 
   target 'CoreTests' do
-    inherit! :search_paths
+    pod 'SwiftyMocky', '4.0.4'
     pod 'RxBlocking', '~> 5.0'
     pod 'RxTest', '~> 5.0'
     pod 'Nimble', '9.0.0'
@@ -31,10 +30,9 @@ target 'Domain' do
   project 'Domain/Domain.xcodeproj'
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
-  pod 'SwiftyMocky', '4.0.4'
 
   target 'DomainTests' do
-    inherit! :search_paths
+    pod 'SwiftyMocky', '4.0.4'
   end
 end
 
@@ -47,11 +45,10 @@ target 'Fortnightly' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
-  pod 'SwiftyMocky', '4.0.4'
   pod 'SwiftGen', '6.4.0'
 
   target 'FortnightlyTests' do
-    inherit! :search_paths
+    pod 'SwiftyMocky', '4.0.4'
     pod 'RxBlocking', '~> 5.0'
     pod 'RxTest', '~> 5.0'
     pod 'Nimble', '9.0.0'

@@ -7,9 +7,8 @@
 
 import SwiftyMocky
 import XCTest
-import Common
 import RxSwift
-import RxRelay
+import RxCocoa
 @testable import Domain
 
 
@@ -53,14 +52,37 @@ open class NewsInteractorInterfaceMock: NewsInteractorInterface, Mock {
         if scopes.contains(.perform) { methodPerformValues = [] }
     }
 
-    public var news: Observable<[Article]> {
-		get {	invocations.append(.p_news_get); return __p_news ?? givenGetterValue(.p_news_get, "NewsInteractorInterfaceMock - stub value for news was not defined") }
-	}
-	private var __p_news: (Observable<[Article]>)?
 
 
 
 
+    open func getNews() -> Observable<[Article]> {
+        addInvocation(.m_getNews)
+		let perform = methodPerformValue(.m_getNews) as? () -> Void
+		perform?()
+		var __value: Observable<[Article]>
+		do {
+		    __value = try methodReturnValue(.m_getNews).casted()
+		} catch {
+			onFatalFailure("Stub return value not specified for getNews(). Use given")
+			Failure("Stub return value not specified for getNews(). Use given")
+		}
+		return __value
+    }
+
+    open func getSelectedArticle() -> Observable<Article> {
+        addInvocation(.m_getSelectedArticle)
+		let perform = methodPerformValue(.m_getSelectedArticle) as? () -> Void
+		perform?()
+		var __value: Observable<Article>
+		do {
+		    __value = try methodReturnValue(.m_getSelectedArticle).casted()
+		} catch {
+			onFatalFailure("Stub return value not specified for getSelectedArticle(). Use given")
+			Failure("Stub return value not specified for getSelectedArticle(). Use given")
+		}
+		return __value
+    }
 
     open func fetchNews(text: String?) -> Completable {
         addInvocation(.m_fetchNews__text_text(Parameter<String?>.value(`text`)))
@@ -76,32 +98,79 @@ open class NewsInteractorInterfaceMock: NewsInteractorInterface, Mock {
 		return __value
     }
 
+    open func fetchSources() -> Completable {
+        addInvocation(.m_fetchSources)
+		let perform = methodPerformValue(.m_fetchSources) as? () -> Void
+		perform?()
+		var __value: Completable
+		do {
+		    __value = try methodReturnValue(.m_fetchSources).casted()
+		} catch {
+			onFatalFailure("Stub return value not specified for fetchSources(). Use given")
+			Failure("Stub return value not specified for fetchSources(). Use given")
+		}
+		return __value
+    }
+
+    open func selectArticle(_ item: Article) -> Completable {
+        addInvocation(.m_selectArticle__item(Parameter<Article>.value(`item`)))
+		let perform = methodPerformValue(.m_selectArticle__item(Parameter<Article>.value(`item`))) as? (Article) -> Void
+		perform?(`item`)
+		var __value: Completable
+		do {
+		    __value = try methodReturnValue(.m_selectArticle__item(Parameter<Article>.value(`item`))).casted()
+		} catch {
+			onFatalFailure("Stub return value not specified for selectArticle(_ item: Article). Use given")
+			Failure("Stub return value not specified for selectArticle(_ item: Article). Use given")
+		}
+		return __value
+    }
+
 
     fileprivate enum MethodType {
+        case m_getNews
+        case m_getSelectedArticle
         case m_fetchNews__text_text(Parameter<String?>)
-        case p_news_get
+        case m_fetchSources
+        case m_selectArticle__item(Parameter<Article>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
+            case (.m_getNews, .m_getNews): return .match
+
+            case (.m_getSelectedArticle, .m_getSelectedArticle): return .match
+
             case (.m_fetchNews__text_text(let lhsText), .m_fetchNews__text_text(let rhsText)):
 				var results: [Matcher.ParameterComparisonResult] = []
 				results.append(Matcher.ParameterComparisonResult(Parameter.compare(lhs: lhsText, rhs: rhsText, with: matcher), lhsText, rhsText, "text"))
 				return Matcher.ComparisonResult(results)
-            case (.p_news_get,.p_news_get): return Matcher.ComparisonResult.match
+
+            case (.m_fetchSources, .m_fetchSources): return .match
+
+            case (.m_selectArticle__item(let lhsItem), .m_selectArticle__item(let rhsItem)):
+				var results: [Matcher.ParameterComparisonResult] = []
+				results.append(Matcher.ParameterComparisonResult(Parameter.compare(lhs: lhsItem, rhs: rhsItem, with: matcher), lhsItem, rhsItem, "_ item"))
+				return Matcher.ComparisonResult(results)
             default: return .none
             }
         }
 
         func intValue() -> Int {
             switch self {
+            case .m_getNews: return 0
+            case .m_getSelectedArticle: return 0
             case let .m_fetchNews__text_text(p0): return p0.intValue
-            case .p_news_get: return 0
+            case .m_fetchSources: return 0
+            case let .m_selectArticle__item(p0): return p0.intValue
             }
         }
         func assertionName() -> String {
             switch self {
+            case .m_getNews: return ".getNews()"
+            case .m_getSelectedArticle: return ".getSelectedArticle()"
             case .m_fetchNews__text_text: return ".fetchNews(text:)"
-            case .p_news_get: return "[get] .news"
+            case .m_fetchSources: return ".fetchSources()"
+            case .m_selectArticle__item: return ".selectArticle(_:)"
             }
         }
     }
@@ -114,16 +183,53 @@ open class NewsInteractorInterfaceMock: NewsInteractorInterface, Mock {
             super.init(products)
         }
 
-        public static func news(getter defaultValue: Observable<[Article]>...) -> PropertyStub {
-            return Given(method: .p_news_get, products: defaultValue.map({ StubProduct.return($0 as Any) }))
-        }
 
+        public static func getNews(willReturn: Observable<[Article]>...) -> MethodStub {
+            return Given(method: .m_getNews, products: willReturn.map({ StubProduct.return($0 as Any) }))
+        }
+        public static func getSelectedArticle(willReturn: Observable<Article>...) -> MethodStub {
+            return Given(method: .m_getSelectedArticle, products: willReturn.map({ StubProduct.return($0 as Any) }))
+        }
         public static func fetchNews(text: Parameter<String?>, willReturn: Completable...) -> MethodStub {
             return Given(method: .m_fetchNews__text_text(`text`), products: willReturn.map({ StubProduct.return($0 as Any) }))
+        }
+        public static func fetchSources(willReturn: Completable...) -> MethodStub {
+            return Given(method: .m_fetchSources, products: willReturn.map({ StubProduct.return($0 as Any) }))
+        }
+        public static func selectArticle(_ item: Parameter<Article>, willReturn: Completable...) -> MethodStub {
+            return Given(method: .m_selectArticle__item(`item`), products: willReturn.map({ StubProduct.return($0 as Any) }))
+        }
+        public static func getNews(willProduce: (Stubber<Observable<[Article]>>) -> Void) -> MethodStub {
+            let willReturn: [Observable<[Article]>] = []
+			let given: Given = { return Given(method: .m_getNews, products: willReturn.map({ StubProduct.return($0 as Any) })) }()
+			let stubber = given.stub(for: (Observable<[Article]>).self)
+			willProduce(stubber)
+			return given
+        }
+        public static func getSelectedArticle(willProduce: (Stubber<Observable<Article>>) -> Void) -> MethodStub {
+            let willReturn: [Observable<Article>] = []
+			let given: Given = { return Given(method: .m_getSelectedArticle, products: willReturn.map({ StubProduct.return($0 as Any) })) }()
+			let stubber = given.stub(for: (Observable<Article>).self)
+			willProduce(stubber)
+			return given
         }
         public static func fetchNews(text: Parameter<String?>, willProduce: (Stubber<Completable>) -> Void) -> MethodStub {
             let willReturn: [Completable] = []
 			let given: Given = { return Given(method: .m_fetchNews__text_text(`text`), products: willReturn.map({ StubProduct.return($0 as Any) })) }()
+			let stubber = given.stub(for: (Completable).self)
+			willProduce(stubber)
+			return given
+        }
+        public static func fetchSources(willProduce: (Stubber<Completable>) -> Void) -> MethodStub {
+            let willReturn: [Completable] = []
+			let given: Given = { return Given(method: .m_fetchSources, products: willReturn.map({ StubProduct.return($0 as Any) })) }()
+			let stubber = given.stub(for: (Completable).self)
+			willProduce(stubber)
+			return given
+        }
+        public static func selectArticle(_ item: Parameter<Article>, willProduce: (Stubber<Completable>) -> Void) -> MethodStub {
+            let willReturn: [Completable] = []
+			let given: Given = { return Given(method: .m_selectArticle__item(`item`), products: willReturn.map({ StubProduct.return($0 as Any) })) }()
 			let stubber = given.stub(for: (Completable).self)
 			willProduce(stubber)
 			return given
@@ -133,16 +239,31 @@ open class NewsInteractorInterfaceMock: NewsInteractorInterface, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
+        public static func getNews() -> Verify { return Verify(method: .m_getNews)}
+        public static func getSelectedArticle() -> Verify { return Verify(method: .m_getSelectedArticle)}
         public static func fetchNews(text: Parameter<String?>) -> Verify { return Verify(method: .m_fetchNews__text_text(`text`))}
-        public static var news: Verify { return Verify(method: .p_news_get) }
+        public static func fetchSources() -> Verify { return Verify(method: .m_fetchSources)}
+        public static func selectArticle(_ item: Parameter<Article>) -> Verify { return Verify(method: .m_selectArticle__item(`item`))}
     }
 
     public struct Perform {
         fileprivate var method: MethodType
         var performs: Any
 
+        public static func getNews(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_getNews, performs: perform)
+        }
+        public static func getSelectedArticle(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_getSelectedArticle, performs: perform)
+        }
         public static func fetchNews(text: Parameter<String?>, perform: @escaping (String?) -> Void) -> Perform {
             return Perform(method: .m_fetchNews__text_text(`text`), performs: perform)
+        }
+        public static func fetchSources(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_fetchSources, performs: perform)
+        }
+        public static func selectArticle(_ item: Parameter<Article>, perform: @escaping (Article) -> Void) -> Perform {
+            return Perform(method: .m_selectArticle__item(`item`), performs: perform)
         }
     }
 

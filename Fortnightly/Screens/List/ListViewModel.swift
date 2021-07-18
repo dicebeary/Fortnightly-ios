@@ -44,7 +44,7 @@ extension ListViewModel: ViewModelManipulator {
     }
 
     func navigate(from viewController: UIViewController) {
-        newsInteractor.selectedArticle
+        newsInteractor.getSelectedArticle()
             .subscribe { [weak self] _ in
                 self?.navigator.push(from: viewController, to: UIConstants.StoryboardIdentifier.details)
             }.disposed(by: bag)
@@ -78,7 +78,7 @@ private extension ListViewModel {
     func selectItem(from tableViewEvents: ControlEvent<IndexPath>) {
         tableViewEvents
             .asObservable()
-            .withLatestFrom(newsInteractor.news) { ($0, $1) }
+            .withLatestFrom(newsInteractor.getNews()) { ($0, $1) }
             .subscribe(onNext: { [newsInteractor, bag] indexPath, articles in
                 let article = articles[indexPath.row]
                 newsInteractor.selectArticle(article)
@@ -91,7 +91,7 @@ private extension ListViewModel {
 // MARK: - Output helper methods
 private extension ListViewModel {
     func getItems() -> Driver<[NewsCell.Data]> {
-        newsInteractor.news
+        newsInteractor.getNews()
             .map { $0.enumerated().map { ListViewMapper.map(from: $0.element, index: $0.offset) } }
             .asDriver(onErrorJustReturn: [])
     }

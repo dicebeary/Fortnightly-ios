@@ -7,6 +7,7 @@
 
 import UIKit
 
+// sourcery: AutoMockable
 protocol NavigatorInterface {
     func push(from viewController: UIViewController, to identifier: String)
 }

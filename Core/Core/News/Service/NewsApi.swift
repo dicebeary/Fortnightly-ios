@@ -40,14 +40,10 @@ extension NewsApi: TargetType {
     var sampleData: Data {
         switch self {
         case .topHeadlines:
-            if let path = Bundle.main.path(forResource: "top-headlines", ofType: "json"),
-                let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-                return data
-            }
+            return StubbedResponse.getResponse(from: "top-headlines")
         case .sources:
-            return Data()
+            return StubbedResponse.getResponse(from: "sources")
         }
-        return Data()
     }
 
     /// The type of HTTP task to be performed.
