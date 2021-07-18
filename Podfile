@@ -17,6 +17,7 @@ target 'Core' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
+  pod "SwiftSpinner", '2.2.0'
 
   target 'CoreTests' do
     pod 'SwiftyMocky', '4.0.4'
@@ -46,6 +47,7 @@ target 'Fortnightly' do
   pod 'Swinject', '2.7.1'
   pod 'SwinjectStoryboard', '2.2.1'
   pod 'SwiftGen', '6.4.0'
+  pod "SwiftSpinner", '2.2.0'
 
   target 'FortnightlyTests' do
     pod 'SwiftyMocky', '4.0.4'
