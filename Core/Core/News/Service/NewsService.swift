@@ -25,4 +25,10 @@ class NewsService: NewsServiceInterface {
             .filterSuccessfulStatusCodes()
             .map(NewsApiModel.self)
     }
+
+    func getSources() -> Single<SourcesApiModel> {
+        return provider.rx.request(.sources)
+            .filterSuccessfulStatusCodes()
+            .map(SourcesApiModel.self)
+    }
 }

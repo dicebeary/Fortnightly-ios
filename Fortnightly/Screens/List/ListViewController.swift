@@ -25,6 +25,7 @@ final class ListViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.navigate(from: self)
         setupTableView()
         setupNavigationBar()
         setupBindings()
@@ -32,11 +33,15 @@ final class ListViewController: UIViewController, UISearchBarDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.title = Localization.newsListTitle
+        self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.tabBarController?.title = ""
+        self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = false
         self.tabBarController?.navigationItem.hidesSearchBarWhenScrolling = true
     }
 }
@@ -58,11 +63,13 @@ extension ListViewController: ViewDataBinder {
 // MARK: - Providing events
 extension ListViewController: ViewEventListener {
     struct Events {
+        let itemSelected: ControlEvent<IndexPath>
         let searchTextChanged: ControlEvent<String?>
     }
 
     var events: Events {
-        return Events(searchTextChanged: ControlEvent(events: searchTextRelay.asObservable()))
+        return Events(itemSelected: tableView.rx.itemSelected,
+                      searchTextChanged: ControlEvent(events: searchTextRelay.asObservable()))
     }
 }
 
@@ -79,12 +86,15 @@ private extension ListViewController {
         tableView.delegate = nil
         tableView.tableFooterView = UIView()
         tableView.register(NewsCell.self)
+
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                self?.tableView.deselectRow(at: indexPath, animated: true)
+            }).disposed(by: bag)
     }
 
     func setupNavigationBar() {
         // Setup Title styles
-        self.tabBarController?.title = Localization.newsListTitle
-        self.tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
         self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = [.font: FontFamily.Merriweather.bold.font(size: 17.0)]
         self.tabBarController?.navigationController?.navigationBar.largeTitleTextAttributes = [.font: FontFamily.Merriweather.bold.font(size: 36.0)]
 
@@ -94,7 +104,7 @@ private extension ListViewController {
         searchController.searchBar.sizeToFit()
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = true
-        searchController.searchBar.placeholder = "Search here"
+        searchController.searchBar.placeholder = Localization.newsListSearchPlaceholder
         self.definesPresentationContext = true
         self.tabBarController?.navigationItem.searchController = searchController
 

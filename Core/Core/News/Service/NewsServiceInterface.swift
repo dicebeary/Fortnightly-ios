@@ -10,4 +10,5 @@ import RxSwift
 // sourcery: AutoMockable
 protocol NewsServiceInterface {
     func getNewsList(text: String?) -> Single<NewsApiModel>
+    func getSources() -> Single<SourcesApiModel>
 }
