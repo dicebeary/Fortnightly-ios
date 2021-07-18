@@ -9,5 +9,7 @@
 // List
 "news_list_title" = "Front page";
 "news_list_tab_item" = "News";
+"news_list_search_placeholder" = "Search here";
 "news_details_share_button" = "Share";
-"news_details_full_article_button" = "Full Article";
+"news_details_full_article_button" = "Full article";
+"news_details_separator" = "¬";

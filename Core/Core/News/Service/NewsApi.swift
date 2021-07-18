@@ -9,6 +9,7 @@ import Moya
 
 enum NewsApi {
     case topHeadlines(text: String?)
+    case sources
 }
 
 extension NewsApi: TargetType {
@@ -20,6 +21,8 @@ extension NewsApi: TargetType {
         switch self {
         case .topHeadlines:
             return "/top-headlines"
+        case .sources:
+            return "/top-headlines/sources"
         }
     }
 
@@ -27,6 +30,8 @@ extension NewsApi: TargetType {
     var method: Moya.Method {
         switch self {
         case .topHeadlines:
+            return .get
+        case .sources:
             return .get
         }
     }
@@ -39,6 +44,8 @@ extension NewsApi: TargetType {
                 let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
                 return data
             }
+        case .sources:
+            return Data()
         }
         return Data()
     }
@@ -52,6 +59,8 @@ extension NewsApi: TargetType {
                 params["q"] = text
             }
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+        case .sources:
+            return .requestPlain
         }
     }
 

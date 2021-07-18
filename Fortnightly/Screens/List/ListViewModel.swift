@@ -11,15 +11,18 @@ import RxCocoa
 
 final class ListViewModel {
     private let newsInteractor: NewsInteractorInterface
+    private let navigator: NavigatorInterface
     private let bag = DisposeBag()
 
-    init(newsInteractor: NewsInteractorInterface) {
+    init(newsInteractor: NewsInteractorInterface,
+         navigator: NavigatorInterface) {
         self.newsInteractor = newsInteractor
+        self.navigator = navigator
     }
 }
 
 // MARK: - Transform data flow
-extension ListViewModel {
+extension ListViewModel: ViewModelManipulator {
     struct Input {
         let screenEvents: ListViewController.Events
     }
@@ -29,10 +32,23 @@ extension ListViewModel {
     }
 
     func map(from input: Input) -> Output {
+        // Listening events
         fetchInitialData()
-        searchNews(with: input.screenEvents.searchTextChanged)
+        searchNews(from: input.screenEvents.searchTextChanged)
+        selectItem(from: input.screenEvents.itemSelected)
 
-        return Output(screenData: ListViewController.Data(items: getItems()))
+        // Gathering data
+        let screenData = ListViewController.Data(items: getItems())
+
+        return Output(screenData: screenData)
+    }
+
+    func navigate(from viewController: UIViewController) {
+        newsInteractor.selectedArticle
+            .subscribe { [weak self] _ in
+                self?.navigator.push(from: viewController, to: UIConstants.StoryboardIdentifier.details)
+            }.disposed(by: bag)
+
     }
 }
 
@@ -42,9 +58,13 @@ private extension ListViewModel {
         newsInteractor.fetchNews(text: nil)
             .subscribe()
             .disposed(by: bag)
+
+        newsInteractor.fetchSources()
+            .subscribe()
+            .disposed(by: bag)
     }
 
-    func searchNews(with searchTextEvents: ControlEvent<String?>) {
+    func searchNews(from searchTextEvents: ControlEvent<String?>) {
         searchTextEvents
             .skip(1)
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
@@ -53,6 +73,18 @@ private extension ListViewModel {
                     .subscribe()
                     .disposed(by: bag)
             }.disposed(by: bag)
+    }
+
+    func selectItem(from tableViewEvents: ControlEvent<IndexPath>) {
+        tableViewEvents
+            .asObservable()
+            .withLatestFrom(newsInteractor.news) { ($0, $1) }
+            .subscribe(onNext: { [newsInteractor, bag] indexPath, articles in
+                let article = articles[indexPath.row]
+                newsInteractor.selectArticle(article)
+                    .subscribe()
+                    .disposed(by: bag)
+            }).disposed(by: bag)
     }
 }
 
